@@ -1,0 +1,17 @@
+{
+    "name": "com.mgs.csv",
+    "version": "1.0.0",
+    "displayName": "CSV",
+    "description": "Parser and Adapter for CSV.",
+    "unity": "2021.3",
+    "keywords": [
+        "csv",
+        "parser",
+        "adapter"
+    ],
+    "author": {
+        "name": "Mogoson",
+        "email": "mogoson@outlook.com",
+        "url": "https://github.com/mogoson"
+    }
+}
