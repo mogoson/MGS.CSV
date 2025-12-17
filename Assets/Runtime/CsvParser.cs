@@ -20,12 +20,12 @@ namespace MGS.CSV
         #region
         const string DELIMITER_FIELD = ",";
 
-        public static string ToLine(IEnumerable<string> fields)
+        public static string ToLine(IEnumerable<object> fields)
         {
             var escapeFields = new List<string>();
             foreach (var field in fields)
             {
-                escapeFields.Add(EscapeField(field));
+                escapeFields.Add(EscapeField(field.ToString()));
             }
             return string.Join(DELIMITER_FIELD, escapeFields);
         }

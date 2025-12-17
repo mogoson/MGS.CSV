@@ -19,7 +19,7 @@ namespace MGS.CSV
 {
     public sealed class CsvIO
     {
-        public static bool Export<T>(string path, IEnumerable<T> objs, bool includeTittleLine = true)
+        public static bool Export<T>(string path, IEnumerable<T> objs, bool includeHeader = true)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace MGS.CSV
                     Directory.CreateDirectory(dir);
                 }
 
-                var text = CsvAdapter.ToText(objs, includeTittleLine);
+                var text = CsvAdapter.ToText(objs, includeHeader);
                 File.WriteAllText(path, text);
                 return true;
             }
@@ -40,12 +40,12 @@ namespace MGS.CSV
             }
         }
 
-        public static IEnumerable<T> Import<T>(string path, bool includeTittleLine = true)
+        public static IEnumerable<T> Import<T>(string path, bool includeHeader = true)
         {
             try
             {
                 var text = File.ReadAllText(path);
-                return CsvAdapter.FromText<T>(text);
+                return CsvAdapter.FromText<T>(text, includeHeader);
             }
             catch (Exception ex)
             {
