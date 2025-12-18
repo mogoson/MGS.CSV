@@ -17,6 +17,9 @@ Parser and Adapter for CSV.
   ```text
   https://github.com/mogoson/MGS.CSV.git?path=/Assets
   ```
+## Samples
+
+- Unity --> Window --> Package Manager --> Packages-Mogoson --> CSV --> Samples.
 
 ---
 

@@ -1,0 +1,16 @@
+{
+    "name": "MGS.CSV.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ab10a83c49ef6e94d969588cd42816ed"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
