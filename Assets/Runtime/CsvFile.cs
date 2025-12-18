@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright © 2025 Mogoson All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  CsvIO.cs
+ *  File         :  CsvFile.cs
  *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -17,7 +17,7 @@ using UnityEngine;
 
 namespace MGS.CSV
 {
-    public sealed class CsvIO
+    public sealed class CsvFile
     {
         public static bool Export<T>(string path, IEnumerable<T> objs, bool includeHeader = true)
         {

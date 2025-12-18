@@ -36,10 +36,7 @@ namespace MGS.CSV
             {
                 return field;
             }
-            if (field.Contains('"'))
-            {
-                field = field.Replace("\"", "\"\"");
-            }
+            field = field.Replace("\"", "\"\"");
             return $"\"{field}\"";
         }
 
@@ -105,9 +102,18 @@ namespace MGS.CSV
             foreach (Match match in matches)
             {
                 var field = match.Groups[1].Success ? match.Groups[1].Value : match.Groups[2].Value;
-                fields.Add(field);
+                fields.Add(UnescapeField(field));
             }
             return fields;
+        }
+
+        static string UnescapeField(string field)
+        {
+            if (string.IsNullOrEmpty(field))
+            {
+                return field;
+            }
+            return field.Replace("\"\"", "\"");
         }
         #endregion
     }

@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright © 2025 Mogoson All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  CsvIOTests.cs
+ *  File         :  CsvFileTests.cs
  *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -16,9 +16,9 @@ using UnityEngine;
 
 namespace MGS.CSV.Tests
 {
-    public class CsvIOTests
+    public class CsvFileTests
     {
-        class TestLineInfo
+        class CsvTestLine
         {
             public string id;
             public string description;
@@ -29,30 +29,30 @@ namespace MGS.CSV.Tests
         [Test]
         public void ExportTest()
         {
-            var infos = new TestLineInfo[]
+            var lines = new CsvTestLine[]
             {
-            new TestLineInfo()
-            {
-                id = "0",
-                description=" Test description start with empty, and follow 'single quotes' and \"double quotation\" and \r\n" +
-                "new line with , and = and @ and true and null and end with empty "
-            }
+                new CsvTestLine()
+                {
+                    id = "0",
+                    description=" Test description start with empty, and follow 'single quotes' and \"double quotation\" and \r\n" +
+                    "new line with , and = and @ and true and null and end with empty "
+                }
             };
-            var succeed = CsvIO.Export(filePath, infos);
+            var succeed = CsvFile.Export(filePath, lines);
             Assert.IsTrue(succeed);
-            Debug.Log($"Export CSV to path {filePath}");
+            Debug.Log($"Export CSV to file {filePath}");
         }
 
         [Test]
         public void ImportTest()
         {
-            var infos = CsvIO.Import<TestLineInfo>(filePath);
-            Assert.IsNotNull(infos);
-            Assert.AreEqual(infos.Count(), 1);
-            Debug.Log($"Import CSV from path {filePath}");
-            foreach (var info in infos)
+            var lines = CsvFile.Import<CsvTestLine>(filePath);
+            Assert.IsNotNull(lines);
+            Assert.AreEqual(lines.Count(), 1);
+            Debug.Log($"Import CSV from file {filePath}");
+            foreach (var line in lines)
             {
-                Debug.Log($"{info.id} {info.description}");
+                Debug.Log($"{line.id} {line.description}");
             }
         }
     }
