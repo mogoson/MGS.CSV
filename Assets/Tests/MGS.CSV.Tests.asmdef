@@ -1,10 +1,10 @@
 {
     "name": "MGS.CSV.Tests",
-    "rootNamespace": "",
+    "rootNamespace": "MGS.CSV.Tests",
     "references": [
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "MGS.CSV"
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:ab10a83c49ef6e94d969588cd42816ed"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

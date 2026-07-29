@@ -1,4 +1,4 @@
-Copyright © 2025 Mogoson
+Copyright © 2026 Mogoson
 
 License see [Package License ](https://github.com/mogoson/MGS.Package/blob/main/LICENSE)
 

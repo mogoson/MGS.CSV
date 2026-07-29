@@ -23,4 +23,4 @@ Parser and Adapter for CSV.
 
 ---
 
-Copyright © 2025 Mogoson.	mogoson@outlook.com
+Copyright © 2026 Mogoson.	mogoson@outlook.com

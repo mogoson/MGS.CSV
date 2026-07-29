@@ -1,6 +1,6 @@
 {
     "name": "MGS.CSV.Sample",
-    "rootNamespace": "",
+    "rootNamespace": "MGS.CSV.Sample",
     "references": [
         "GUID:ab10a83c49ef6e94d969588cd42816ed"
     ],
